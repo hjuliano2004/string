@@ -1,0 +1,17 @@
+# Ignora executáveis gerados pela compilação
+*.exe
+*.out
+*.o
+
+# Ignora arquivos de debug
+*.log
+
+# Ignora arquivos temporários
+*.tmp
+*.swp
+
+# Ignora binários em geral
+/bin/
+/build/
+/dist/
+
