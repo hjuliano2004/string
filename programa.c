@@ -11,8 +11,7 @@ int main() {
 
     String *palavra = string(a, 1);
 
-    String *palavra2 =
-        string((char *[]){"aaaa a aa ", "aaaaaaa ", palavra->data, NULL}, 1);
+    String *palavra2 = string((char *[]){"aaaa a aa ", "aaaaaaa ", palavra->data, NULL}, 1);
 
 
         palavra->data = "gan";

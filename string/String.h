@@ -17,7 +17,7 @@ typedef struct{
 
 extern StringList *coletor;
 
-String* string(char **data, int coletar);
+String* string(char **data);
 
 int contaLength(char **data);
 

@@ -19,7 +19,11 @@ int contaLength(char **data) {
     return length;
 }
 
-String *string(char **data, int coletar) {
+String *string(char **data) {
+
+    if(coletor == NULL){
+        coletor = stringList(50);
+    }
 
     String *s = malloc(sizeof(String));
 
@@ -28,9 +32,9 @@ String *string(char **data, int coletar) {
     s->length = contaLength(data);
     s->limite = s->length + (s->length / 3);
 
-    if (coletar) {
+    //if (coletar) {
         addLixo(s);
-    }
+   // }
 
     return s;
 }
