@@ -1,33 +1,35 @@
+#include "string/String.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "string/String.h"
 
-int main(){
+int main() {
 
-    char* a[] = {"aaa", " eee", NULL};
+    coletor = stringList(50);
 
-    coletor = criaArrayList(50);
+    char *a[] = {"aaa", " eee", NULL};
+
+    String *palavra = string(a, 1);
+
+    String *palavra2 =
+        string((char *[]){"aaaa a aa ", "aaaaaaa ", palavra->data, NULL}, 1);
 
 
-    String* string = frase(a);
-
-    String* string2 = frase((char*[]){"aaaa a aa ", "aaaaaaa ", string->data, NULL});
+        palavra->data = "gan";
 
 
-    String* lista[100] = {NULL};
 
-    println(lista[80]);
+    println(string((char *[]){"antes do free coletor", NULL}, 0));
+    for (int i = 0; i < coletor->length; i++) {
+        println(coletor->list[i]);
+    }
 
-    println(string);
-    println(string2);
+    freeColetor();
 
-    free(string->data);
-    free(string2->data);
-
-    free(string);
-    free(string2);
-
+    println(string((char *[]){"depois do free coletor", NULL}, 0));
+    for (int i = 0; i < coletor->length; i++) {
+        println(coletor->list[i]);
+    }
 
     return 0;
 }
